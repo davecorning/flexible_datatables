@@ -11,6 +11,6 @@ Gem::Specification.new do |s|
   s.description = 'Flexible Datatables wraps array-like objects (ActiveRecord::Relation collections, etc) that JQuery Datatables can read (via ajax) from your Ruby / Rails web application.'
   s.authors     = ["Dave Corning"]
   s.email       = 'dave@davecorning.com'
-  s.files       = Dir['lib/**/*.rb'] + ['CHANGELOG', 'CHANGELOG.md', 'README.md']
+  s.files       = Dir['lib/**/*.rb'] + ['CHANGELOG', 'CHANGELOG.md', 'README.rdoc']
   s.homepage    = 'https://github.com/davecorning/flexible_datatables'
 end
