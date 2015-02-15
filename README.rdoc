@@ -1,4 +1,4 @@
-= Flexible Datatables
+= Flexible Datatables {<img src="https://badge.fury.io/rb/flexible_datatables.svg" alt="Gem Version" />}[http://badge.fury.io/rb/flexible_datatables]
 Easily integrate {JQuery Datatables}[https://www.datatables.net] (with Ajax) into your Ruby / Rails web applications.
 
 == Introduction
