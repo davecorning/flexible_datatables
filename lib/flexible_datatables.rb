@@ -1,3 +1,8 @@
+require 'ostruct'
+require 'flexible_datatables/paginators'
+require 'flexible_datatables/configurator'
+require 'flexible_datatables/datatable'
+
 module FlexibleDatatables
   def self.configuration
     Configurator.configuration do |config|
@@ -9,8 +14,3 @@ module FlexibleDatatables
     Configurator.settings
   end
 end
-
-require 'ostruct'
-require 'flexible_datatables/datatable'
-require 'flexible_datatables/configurator'
-require 'flexible_datatables/paginators'
