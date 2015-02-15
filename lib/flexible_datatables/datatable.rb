@@ -21,8 +21,8 @@ module FlexibleDatatables
       }
     end
 
-    def format_grid(cols)
-      @columns = cols unless cols.blank?
+    def format_grid(cols = [])
+      @columns = cols unless cols.empty?
       records = collection.order("#{sort_column} #{sort_direction}")
       @grid = paginate(records).map { |record| yield(record) }
     end
