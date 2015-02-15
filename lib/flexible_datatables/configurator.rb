@@ -5,7 +5,7 @@ module FlexibleDatatables
 
       def initialize
         @items_per_page = 10
-        @paginator = DummyPaginator
+        @paginator = ::FlexibleDatatables::DummyPaginator
       end
     end
 
