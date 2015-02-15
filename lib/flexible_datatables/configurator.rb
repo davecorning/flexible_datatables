@@ -9,8 +9,8 @@ module FlexibleDatatables
       end
     end
 
+    @@settings = Settings.new
     def self.configuration
-      @@settings ||= Settings.new
       yield(@@settings)
     end
 
