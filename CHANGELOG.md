@@ -1,20 +1,18 @@
-Change Log
-==========
+# Change Log
 
 All notable changes to the project are documented in this file.
 
-[v1.0.1] - 2015-02-15
---------------------
+## [Unreleased][unreleased]
 
-ca4badc Don't use 'blank?', which is an enhancement to Ruby from Rails, because obviously the code won't work outside of Rails
-e621434 refer to the default DummyPaginator using the full namespace
-4bb3085 Instantiate a Settings object when Configurator is defined, so default settings are available without needing to call Configurator.configuration first
-513db65 pull in paginators and configurator definitions first
-95d38a5 tweak file list
-2308215 use rdoc for the README
+## [v1.0.1] - 2015-02-15
 
-[v1.0.0] - 2015-02-14
---------------------
+### Fixed
+* Don't use 'blank?', which is an enhancement to Ruby from Rails, because obviously the code won't work outside of Rails
+* refer to the default DummyPaginator using the full namespace
+* Instantiate a Settings object when Configurator is defined, so default settings are available without needing to call Configurator.configuration first
+* pull in paginators and configurator definitions first
 
-38c6db1 initial commit
+## v1.0.0 - 2015-02-14
 
+[unreleased]: https://github.com/davecorning/flexible_datatables/compare/v1.0.1...HEAD
+[v1.0.1]: https://github.com/davecorning/flexible_datatables/compare/v1.0.0...v1.0.1
