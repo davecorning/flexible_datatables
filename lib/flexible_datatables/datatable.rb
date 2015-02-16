@@ -9,6 +9,7 @@ module FlexibleDatatables
       @length    = args.fetch(:length, Configurator.settings.items_per_page).to_i
       @order     = args.fetch(:order, {})
       @paginator = args.fetch(:paginator, Configurator.settings.paginator)
+      @sorter    = Configurator.settings.sorter
       @start     = args.fetch(:start, 0).to_i
     end
 
@@ -23,7 +24,7 @@ module FlexibleDatatables
 
     def format_grid(cols = [])
       @columns = cols unless cols.empty?
-      records = collection.order("#{sort_column} #{sort_direction}")
+      records = sort(records)
       @grid = paginate(records).map { |record| yield(record) }
     end
 
@@ -32,18 +33,15 @@ module FlexibleDatatables
                 :length,
                 :order,
                 :paginator,
-                :start
-
-    def sort_column
-      @columns[order["0"].fetch(:column).to_i]
-    end
-
-    def sort_direction
-      order["0"].fetch(:dir) == "desc" ? "desc" : "asc"
-    end
+                :start,
+                :sorter
 
     def paginate(records)
       paginator.paginate(start: start, length: length, records: records)
+    end
+
+    def sort(records)
+      sorter.sort(columns: @columns, records: collection, order: order)
     end
   end
 end

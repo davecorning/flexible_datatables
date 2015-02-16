@@ -1,5 +1,6 @@
 require 'ostruct'
 require 'flexible_datatables/paginators'
+require 'flexible_datatables/sorters'
 require 'flexible_datatables/configurator'
 require 'flexible_datatables/datatable'
 
