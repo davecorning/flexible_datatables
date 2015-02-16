@@ -14,4 +14,5 @@ Gem::Specification.new do |s|
   s.files       = Dir['lib/**/*.rb'] +
                   %w(CHANGELOG CHANGELOG.md README.rdoc)
   s.homepage    = 'https://github.com/davecorning/flexible_datatables'
+  s.required_ruby_version = '>= 1.9.3'
 end
